@@ -41,8 +41,12 @@ function realizarCobro(clientes) {
             cobro += tarifa[0];
             break;
     }
-    if (hora => 23)
-        cobro =tarifa[3];
+    if ((hora + 1) >= 24) {
+        cobro = tarifa[3];
+        var horasDeMas = hora - 24;
+        for (var i = 0; i < horasDeMas; i++)
+            cobro += tarifa[3];
+    }
     console.log(Object.keys(clienteCobrado) + ": " + cobro + "€");
     return clientes;
 }
