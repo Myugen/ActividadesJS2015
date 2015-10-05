@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad 2 - Ejercicio 3</title>
+    <script type="text/javascript">
+        alert("A continuación vamos a pedir 3 números (2 enteros, 1 real) para luego sumarlos.");
+        do {
+            primerNumero = parseInt(prompt("Escriba el primer número:"));
+            if(isNaN(primerNumero))
+                alert("Por favor, escriba un número.");
+        }while(isNaN(primerNumero)); //Control de entrada para volver a pedir el número
+        do {
+            segundoNumero = parseInt(prompt("Escriba el segundo número:"));
+            if(isNaN(segundoNumero))
+                alert("Por favor, escriba un número.");
+        }while(isNaN(segundoNumero));
+        do {
+            tercerNumero = parseFloat(prompt("Escriba el tercer número:"));
+            if(isNaN(tercerNumero))
+                alert("Por favor, escriba un número.");
+        }while(isNaN(tercerNumero));
+        resultado = primerNumero + segundoNumero + tercerNumero;
+        alert("El resultado de: " + primerNumero + " + " + segundoNumero + " + " + tercerNumero + " = " + resultado);
+    </script>
+</head>
+<body>
+    <p>Script que pide por pantalla tres números (2 enteros y 1 real) y luego muestra el resultado de la suma de ellos.</p>
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>

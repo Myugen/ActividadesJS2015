@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+         <title>El primer script</title>
+         <script type="text/javascript">
+            alert("Hola Mundo!");
+            alert("Soy el primer script");
+            function nuevoMensaje(){
+                mensaje = prompt("Escriba el mensaje que desea mostrar:");
+                alert(mensaje);
+            }
+         </script>
+     </head>
+     <body onLoad=nuevoMensaje()>
+         <p>Esta página contiene el primer script</p>
+         <noscript>Su navegador no soporta JavaScaript o se encuentra la opción desactivada</noscript>
+     </body>
+</html>

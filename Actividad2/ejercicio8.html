@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 8</title>
+    <script type="text/javascript">
+        do{
+            numeroEntero = parseInt(prompt("Escriba un numero entero comprendido entre 1-99:"));
+            if(isNaN(numeroEntero))
+               alert("Por favor escriba un número.");
+            if((numeroEntero < 1) || (numeroEntero > 99))
+                alert("Por favor, escriba un número entre 1 y 99.");
+        }while(isNaN(numeroEntero) || (numeroEntero < 1) || (numeroEntero > 99));
+        if(numeroEntero < 10)
+            alert("El número introducido " + numeroEntero + " tiene 1 dígito.");
+        else
+            alert("El número introducido " + numeroEntero + " tiene 2 dígitos.");
+    </script>
+</head>
+<body>
+    <p>Script que pide por pantalla un número entero comprendido entre 1 y 99, y muestra si es de 1 o 2 dígitos.</p>
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>

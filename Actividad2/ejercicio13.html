@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 13</title>
+    <script type="text/javascript">
+        numeros = new Array();
+        //Entrada de 5 números que se almacenarán en un array
+        for(i = 0; i < 5; i++){
+            do{
+                numero = parseInt(prompt("Escriba un número:"));
+                if(isNaN(numero))
+                    alert("Por favor, introduzca un número.");
+            }while(isNaN(numero));
+            numeros.push(numero);
+        }
+        pares = new Array();   //Array que almacenará los números pares introducidos
+        impares = new Array(); //Array que almacenará los números impares introducidos
+        for(i = 0; i < numeros.length; i++){
+            if(numeros[i] % 2 == 0)
+                pares.push(numeros[i]);
+            else
+                impares.push(numeros[i]);
+        }
+        document.write("<h2>Análisis de los números introducidos</h2>");
+        document.write("<p>Números pares introducidos: " + pares.length + "</p>");
+        document.write("<p>Números impares introducidos: " + impares.length + "</p>");
+    </script>
+</head>
+<body>
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>

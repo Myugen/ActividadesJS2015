@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad 2 - Ejercicio 4</title>
+    <script type="text/javascript">
+        alert("A continuación vamos a pedir 3 notas del alumno, luego calculamos su media y comprobamos si promociona (Nota media >= 7).");
+        do {
+            primeraNota = parseFloat(prompt("Escriba la primera nota:"));
+            if(isNaN(primeraNota))
+                alert("Por favor, escriba un número.");
+        }while(isNaN(primeraNota)); //Control de entrada para volver a pedir el número
+        do {
+            segundaNota = parseFloat(prompt("Escriba el segundo número:"));
+            if(isNaN(segundaNota))
+                alert("Por favor, escriba un número.");
+        }while(isNaN(segundaNota));
+        do {
+            terceraNota = parseFloat(prompt("Escriba el tercer número:"));
+            if(isNaN(terceraNota))
+                alert("Por favor, escriba un número.");
+        }while(isNaN(terceraNota));
+        notaMedia = (primeraNota + segundaNota + terceraNota) / 3;
+        if(notaMedia >= 7)
+            alert("El alumno tiene una nota media de " + notaMedia + ": PROMOCIONA");
+        else
+            alert("El alumno tiene una nota media de " + notaMedia + ": NO PROMOCIONA");
+    </script>
+</head>
+<body>
+    <p>Script que pide por pantalla tres notas de un alumno y luego muestra la nota media para determinar si promociona o no (Nota media >= 7).</p>
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>

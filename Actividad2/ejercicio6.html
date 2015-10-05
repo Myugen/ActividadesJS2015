@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6</title>
+    <script type="text/javascript">
+        function proceso(){
+            do {
+                numero = parseInt(prompt("Escriba el número que desea multipliciar: "));
+                if(isNaN(numero))
+                    alert("Por favor, escriba un número.");
+            }while(isNaN(numero));
+            resultado = numero * 3;
+            alert("El resultado de multiplicar " + numero + " * 3 es: " + resultado);
+        }
+    </script>
+</head>
+<body>
+    <p>Script que muestra un enlace que al clicar pide un número para luego multiplicar por 3 y mostrar su resultado: <a href="#" onclick="proceso()">Click here!</a></p>
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>

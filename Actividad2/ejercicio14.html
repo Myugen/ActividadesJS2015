@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 14</title>
+    <script type="text/javascript">
+        function creaPiramide(letra, numero){
+            document.write("<h2>Vamos a crear un triángulo.</h2>");
+            for(i = 0; i < numero; i++){
+                document.write("<p>");
+                for(j = 0; j < (numero - i); j++){
+                    document.write(letra);
+                }
+                document.write("</p>");
+            }
+        }
+        function cargar(){
+            do{
+                letra = prompt("Escriba una letra con la que desea crear el triángulo");
+                if(letra.length != 1)
+                    alert("Asegúrese de escribir una sola letra.");
+            }while(letra.length != 1);
+            do{
+                numero = parseInt(prompt("Escriba un número:"));
+                if(isNaN(numero))
+                    alert("Por favor, introduzca un número.");
+            }while(isNaN(numero));
+            creaPiramide(letra, numero);
+        }
+    </script>
+</head>
+<body onload="cargar()">
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>

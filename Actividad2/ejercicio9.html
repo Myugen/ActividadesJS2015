@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 9</title>
+    <script type="text/javascript">
+        function buscar(vector, item){
+            for(i = 0; i < vector.length; i++)
+                if(vector[i] == item)
+                    return i;
+            return -1;
+        }
+        var palabras = ["profesor", "manzana", "servidor", "mar"];
+        var traduccion = ["teacher", "apple", "server", "sea"];
+        do{
+            palabra = prompt("Escriba una palabra de estas cuatro: 'profesor', 'manzana', 'servidor', 'mar'. A continuación se le mostrará la traducción al inglés de la palabra escrita.");
+            indice = buscar(palabras, palabra);
+            if(indice == -1)
+                alert("La palabra introducida no corresponde con ninguna de las anteriormente mostradas: 'profesor', 'manzana', 'servidor', 'mar'.");
+        }while(indice == -1);
+        alert("La traducción al inglés de " + palabra + " es: " + traduccion[indice] + ".");
+    </script>
+</head>
+<body>
+    <p>Script que pide por pantalla que se escriba una palabra de las cuatro que muestra y a continuación enseña la traducción al inglés de la misma.</p>
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>

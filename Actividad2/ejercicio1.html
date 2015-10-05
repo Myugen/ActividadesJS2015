@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad 2 - Ejercicio 1</title>
+    <script type="text/javascript">
+        alert("A continuación vamos a pedir 4 números para comparar cual es el mayor.");
+        do {
+            primerNumero = parseInt(prompt("Escriba el primer número:"));
+            if(isNaN(primerNumero))
+                alert("Por favor, escriba un número.");
+        }while(isNaN(primerNumero)); //Control de entrada para volver a pedir el número
+        do {
+            segundoNumero = parseInt(prompt("Escriba el segundo número:"));
+            if(isNaN(segundoNumero))
+                alert("Por favor, escriba un número.");
+        }while(isNaN(segundoNumero));
+        do {
+            tercerNumero = parseInt(prompt("Escriba el tercer número:"));
+            if(isNaN(tercerNumero))
+                alert("Por favor, escriba un número.");
+        }while(isNaN(tercerNumero));
+        do {
+            cuartoNumero = parseInt(prompt("Escriba el cuarto número:"));
+            if(isNaN(cuartoNumero))
+                alert("Por favor, escriba un número.");
+        }while(isNaN(cuartoNumero));
+        numeroMayor = (primerNumero >= segundoNumero) ? primerNumero : segundoNumero;
+        if(numeroMayor < tercerNumero)
+            numeroMayor = tercerNumero;
+        else if(numeroMayor < cuartoNumero)
+            numeroMayor = cuartoNumero;
+        alert("El número mayor de todos ellos es: " + numeroMayor);
+    </script>
+</head>
+<body>
+    <p>Script que pide por pantalla cuatro números y luego evalúa cual es el mayor.</p>
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>

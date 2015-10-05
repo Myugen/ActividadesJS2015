@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <script type="text/javascript">
+        function elevarEntero(base, exponente) {
+            resultado = 1;
+            if(exponente == 0)
+                return resultado;
+            else if(exponente > 0)
+                for(i = 0; i < exponente; i++)
+                    resultado *= base;
+            else {
+                exponente *= -1;
+                for(i = 0; i < exponente; i++)
+                    resultado *= base;
+                resultado = 1 / resultado;
+            }
+            return resultado;
+        }
+
+        function cargar() {
+            do{
+                base = parseInt(prompt("Introduzca un valor número:"));
+                if(isNaN(base))
+                    alert("Por favor, escriba un número.");
+            }while(isNaN(base));
+            do{
+                exponente = parseInt(prompt("Introduzca el exponente por el que desea elevarlo:"));
+                if(isNaN(exponente))
+                    alert("Por favor, escriba un número.");
+            }while(isNaN(exponente));
+            resultado = elevarEntero(base, exponente);
+            document.write("<p>El resultado de " + base + "<sup>" + exponente + "</sup> = " + resultado);
+        }
+    </script>
+</head>
+<body onload="cargar()">
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilidado.</noscript>
+</body>
+</html>

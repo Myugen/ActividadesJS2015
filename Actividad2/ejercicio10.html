@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 10</title>
+    <script type="text/javascript">
+        fechaHoy = new Date();
+        anioActual = fechaHoy.getFullYear();
+        do{
+            anioNacimiento = parseInt(prompt("Escriba su año de nacimiento para conocer su edad (formato 4 dígitos, mayor de 1900 e inferior que el año actual):"));
+            if(isNaN(anioNacimiento))
+                alert("Por favor, introduzca un número.");
+            if(anioNacimiento < 1900)
+                alert("Escriba un año superior a 1900.");
+            if(anioNacimiento > anioActual)
+                alert("Escriba un año inferior a " + anioActual + ".");
+        }while((isNaN(anioNacimiento)) || (anioNacimiento < 1900) || (anioNacimiento > anioActual));
+        edadPosible = anioActual - anioNacimiento;
+        alert("Tu edad es " + (edadPosible - 1) + " o " + edadPosible + ".");
+    </script>
+</head>
+<body>
+    <p>Script que pide tu año de nacimiento y te muestra tu posible edad.</p>
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>

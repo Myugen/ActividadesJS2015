@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+    <script type="text/javascript">
+        /**
+         * Función que crea una sucesión de números desde un principio y un final.
+         * @param   {Number} inicio Valor inicial por el que empieza la sucesión
+         * @param   {Number} final  Valor final por el que termina la sucesión
+         * @returns {Array}  Valores de la sucesión que van desde 'inicio' a 'final' ambos incluidos.
+         */
+        function contar(inicio, final){
+            valores = new Array();
+            for(i = inicio; i <= final; i++)
+                valores.push(i);
+            return valores;
+        }
+
+        /**
+         * Función que muestra en el documento el contenido de un array.
+         * @param {Array} valores Array con valores
+         */
+        function mostrarValores(valores){
+            document.write("<h2>Empieza la cuenta:</h2>");
+            cadena = "<p>";
+            for(i = 0; i < valores.length; i++) {
+                if(i == (valores.length - 1))
+                    cadena += valores[i];
+                else
+                    cadena += valores[i] + ", ";
+            }
+            cadena += "</p>";
+            document.write(cadena);
+        }
+
+        /** Función que carga el script.
+         */
+        function cargar() {
+            do{
+                do{
+                    inicio = parseInt(prompt("Escriba un valor inicial menor:"));
+                    if(isNaN(inicio))
+                        alert("Por favor, escriba un número.");
+                }while(isNaN(inicio));
+                do{
+                    final = parseInt(prompt("Escriba un valor final mayor:"));
+                    if(isNaN(final))
+                        alert("Por favor, escriba un número.");
+                }while(isNaN(final));
+                if(inicio == final)
+                    alert("El valor inicial no puede ser igual al final.");
+                if(inicio > final)
+                    alert("El valor inicial no puede ser mayor al final.");
+            }while(inicio >= final);
+            valores = contar(inicio, final);
+            mostrarValores(valores);
+        }
+    </script>
+</head>
+<body onload="cargar()">
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilidado.</noscript>
+</body>
+</html>

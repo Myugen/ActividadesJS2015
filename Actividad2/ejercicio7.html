@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7</title>
+    <script type="text/javascript">
+        function proceso(){
+            do {
+                primerNumero = parseInt(prompt("Escriba el número que desea multipliciar: "));
+                if(isNaN(primerNumero))
+                    alert("Por favor, escriba un número.");
+            }while(isNaN(primerNumero));
+            resultado = primerNumero * 3;
+            alert("El resultado de " + primerNumero + " * 3 es: " + resultado);
+            do {
+                segundoNumero = parseInt(prompt("Escriba el número que desea multipliciar: "));
+                if(isNaN(segundoNumero))
+                    alert("Por favor, escriba un número.");
+            }while(isNaN(segundoNumero));
+            resultado += segundoNumero;
+            alert("El resultado de (" + primerNumero + " * 3) + " + segundoNumero + " es: " + resultado);
+        }
+    </script>
+</head>
+<body>
+    <p>Script que muestra un enlace que al clicar pide un número para luego multiplicar por 3, mostrar su resultado. Una vez mostrado vuelve a pedir otro número que sumará con el resultado obtenido anteriormente y lo mostrará: <a href="#" onclick="proceso()">Click here!</a></p>
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>

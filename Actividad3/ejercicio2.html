@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <script type="text/javascript">
+        function numeroMayor(valores) {
+            candidato = valores[0];
+            for(i = 1; i < valores.length; i++)
+                if(candidato < valores[i])
+                    candidato = valores[i];
+            return candidato;
+        }
+
+        function mostrarValores(valores) {
+            document.write("<h2>Valores introducidos:</h2>");
+            cadena = "<p>";
+            for(i = 0; i < valores.length; i++) {
+                if(i == (valores.length - 1))
+                    cadena += valores[i];
+                else
+                    cadena += valores[i] + ", ";
+            }
+            cadena += "</p>";
+            document.write(cadena);
+        }
+
+        function cargar() {
+            valores = new Array();
+            for(i = 0; i < 10; i++) {
+                do{
+                    valor = parseInt(prompt("Escriba un valor numérico:"));
+                    if(isNaN(valor))
+                       alert("Por favor escriba un valor numérico.");
+                }while(isNaN(valor));
+                valores.push(valor);
+            }
+            valorMayor = numeroMayor(valores);
+            mostrarValores(valores);
+            document.write("<p>El valor mayor de todos ellos es: <strong>" + valorMayor + "</strong></p>");
+        }
+    </script>
+</head>
+<body onload="cargar()">
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilidado.</noscript>
+</body>
+</html>

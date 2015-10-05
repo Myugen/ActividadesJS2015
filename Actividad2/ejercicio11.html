@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 11</title>
+    <script type="text/javascript">
+        //Función que crea una objeto alumno
+        function Alumno(nombre, preguntas, aciertos){
+            this.nombre = nombre;
+            this.preguntas = preguntas;
+            this.aciertos = aciertos;
+            this.porcentaje = aciertos*100/preguntas;
+            if(this.porcentaje >= 90)
+                nivel = "A";
+            else if((this.porcentaje < 90) && (this.porcentaje >= 75))
+                nivel = "B";
+            else if((this.porcentaje < 75) && (this.porcentaje >= 50))
+                nivel = "C";
+            else
+                nivel = "D";
+            this.nivel = nivel;
+        }
+        nombre = prompt("Escriba el nombre del alumno:");
+        do{
+            preguntas = parseInt(prompt("Escriba la cantidad numérica de preguntas que se le realizaron:"));
+            if(isNaN(preguntas))
+                alert("Por favor, introduzca un número.");
+        }while(isNaN(preguntas));
+        do{
+            aciertos = parseInt(prompt("Escriba la cantidad numérica de aciertos que obtuvo:"));
+            if(isNaN(aciertos))
+                alert("Por favor, introduzca un número.");
+            if(aciertos > preguntas)
+                alert("El número de aciertos no puede ser mayor al número de preguntas que se le realizaron.");
+        }while((isNaN(aciertos)) || (aciertos > preguntas));
+
+        alumno = new Alumno(nombre, preguntas, aciertos);
+
+        //Salida por consola
+        console.log("Alumno: " + alumno.nombre + "\n");
+        console.log(" -Preguntas realizadas: " + alumno.preguntas + "\n");
+        console.log(" -Preguntas acertadas: " + alumno.aciertos + "\n");
+        //console.log(" -Porcentaje de acierto: " + alumno.porcentaje + "%\n");
+        console.log(" -Nivel del alumno: " + alumno.nivel + "\n");
+
+        //Salida por el documento
+        document.write("<h1>Alumno: " + alumno.nombre + "</h1>");
+        document.write("<h2> -Preguntas realizadas: " + alumno.preguntas + "</h2>");
+        document.write("<h2> -Preguntas acertadas: " + alumno.aciertos + "</h2>");
+        //document.write("<h2> -Porcentaje de acierto: " + alumno.porcentaje + "%</h2>");
+        document.write("<h2> -Nivel del alumno: " + alumno.nivel + "</h2>");
+    </script>
+</head>
+<body>
+    <noscript>Su navegador no soporta JavaScript o lo tiene deshabilitado.</noscript>
+</body>
+</html>
