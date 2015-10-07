@@ -1,5 +1,5 @@
-var asientos = new Array();
-function inicializarAsientos (asientos, asientosBalcon, asientosPatio) {
+var asientos = [];
+function inicializarAsientos(asientos, asientosBalcon, asientosPatio) {
     asientos.push(new Array(asientosBalcon));
     asientos.push(new Array(asientosPatio));
 
@@ -14,7 +14,7 @@ function inicializarAsientos (asientos, asientosBalcon, asientosPatio) {
 
 }
 
-function mostrarAsientos (asientos) {
+function mostrarAsientos(asientos) {
     var cadena = "<h2>Disponibilidad de asientos:</h2><br>";
     for (var i = 0; i < asientos.length; i++) {
         if (i == 0)
@@ -32,14 +32,14 @@ function mostrarAsientos (asientos) {
     }
 }
 
-function buscarAsiento (asientos, zona) {
+function buscarAsiento(asientos, zona) {
     for (var i = 0; i < asientos[zona].length; i++)
         if (!asientos[zona][i].ocupado)
             return i;
     return -1;
 }
 
-function reservarAsiento (asientos) {
+function reservarAsiento(asientos) {
     var correcto = false;
     do {
         var opcion = prompt("Elija la zona donde quiere estar ubicado:\n1 - Balcón\n2 - Patio de butacas\nEscriba una opción:");
@@ -64,7 +64,7 @@ function reservarAsiento (asientos) {
     }
 }
 
-function cargar (asientos) {
+function cargar(asientos) {
     const MAX_BALCON = 6;
     const MAX_PATIO = 9;
     asientos = inicializarAsientos(asientos, MAX_BALCON, MAX_PATIO);
