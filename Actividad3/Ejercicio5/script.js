@@ -10,7 +10,7 @@ function modificarNota(clase) {
     var nombre = prompt("Escribe el nombre del alumno:");
     var alumnoBuscado = buscarAlumno(clase, nombre);
     if (alumnoBuscado != -1) {
-        var notaNueva = parseInt(prompt("Alumno - " + Object.keys(clase[i]) + "\nEscriba nueva nota:"));
+        var notaNueva = parseInt(prompt("Alumno - " + Object.keys(clase[alumnoBuscado]) + "\nEscriba nueva nota:"));
         var correcto = false;
         while(!correcto)
             if(isNaN(notaNueva))
