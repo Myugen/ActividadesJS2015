@@ -9,7 +9,6 @@ function Contacto(nombre, apellidos, correoElectronico, telefonoFijo, telefonoMo
 }
 
 Contacto.prototype.mostrarContacto = function() {
-    //CHANGES Hacer que la consola se borre
     console.log(this.nombre.toUpperCase() + " " + this.apellidos.toUpperCase() + ":");
     console.log("-Correo eléctronico: " + this.correoElectronico);
     console.log("-Teléfono fijo: " + this.telefonoFijo);
@@ -71,6 +70,7 @@ function aniadirContacto(agenda) {
 }
 
 function mostrarAgenda(agenda) {
+    //CHANGES Hacer que la consola se borre
     if(agenda.length == 0) {
         var aceptar = confirm("La agenda está vacía, añade algún contacto. ¿Desea añadir un contacto?");
         if(aceptar)
