@@ -24,13 +24,13 @@ function validarEmail(email) {
 }
 
 function validarTelefonoFijo(telefonoFijo) {
-    //FIXME Arreglar la validación
-    var re = /^[0-9]{9}$/i;
-    re.test(telefonoFijo);
+    var re = /^(8|9)\d{8}$/i;
+    return re.test(telefonoFijo);
 }
 
 function validarTelefonoMovil(telefonoMovil) {
-    //TODO Añadir validación al teléfono móvil
+    var re = /^(6|7)\d{8}$/i;
+    return re.test(telefonoMovil);
 }
 
 var agenda = [];
@@ -55,16 +55,16 @@ function aniadirContacto(agenda) {
     }while(!validarEmail(email));
 
     do {
-        var telefonoFijo = parseInt(prompt("Teléfono fijo:"));
+        var telefonoFijo = prompt("Teléfono fijo:");
         if(!validarTelefonoFijo(telefonoFijo))
             alert("El número de teléfono no es valido.");
     }while(!validarTelefonoFijo(telefonoFijo));
 
-    //do {
+    do {
         var telefonoMovil = prompt("Teléfono móvil:");
-        //if(!validarTelefonoMovil(telefonoMovil))
-            //alert("El número de teléfono no es valido.");
-    //}while(!validarTelefonoMovil(telefonoMovil));
+        if(!validarTelefonoMovil(telefonoMovil))
+            alert("El número de teléfono no es valido.");
+    }while(!validarTelefonoMovil(telefonoMovil));
 
     var twitter = prompt("Twitter:");
     var linkedin = prompt("LinkedIn:");
