@@ -30,7 +30,7 @@ function validarTelefonoFijo(telefonoFijo) {
 }
 
 function validarTelefonoMovil(telefonoMovil) {
-    //TODO Buscar el validar telefono móvil español
+    //TODO Añadir validación al teléfono móvil
 }
 
 var agenda = [];
