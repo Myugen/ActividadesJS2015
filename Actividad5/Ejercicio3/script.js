@@ -18,11 +18,15 @@ Contacto.prototype.mostrarContacto = function() {
 };
 
 function validarEmail(email) {
-    //TODO Buscar el validar email
+    //Expresión regular para validacion del email
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
 }
 
 function validarTelefonoFijo(telefonoFijo) {
-    //TODO Buscar el validar telefono fijo español
+    //FIXME Arreglar la validación
+    var re = /^[0-9]{9}$/i;
+    re.test(telefonoFijo);
 }
 
 function validarTelefonoMovil(telefonoMovil) {
@@ -44,17 +48,17 @@ function aniadirContacto(agenda) {
             alert("El campo nombre no debe estar vacio.");
     }while(apellidos == "");
 
-    //do {
+    do {
         var email = prompt("Correo eléctronico:");
-        //if(!validarEmail(email))
-            //alert("El correo electrónico introducido no es válido.");
-    //}while(!validarEmail(email));
+        if(!validarEmail(email))
+            alert("El correo electrónico introducido no es válido.");
+    }while(!validarEmail(email));
 
-    //do {
-        var telefonoFijo = prompt("Teléfono fijo:");
-        //if(!validarTelefonoFijo(telefonoFijo))
-            //alert("El número de teléfono no es valido.");
-    //}while(!validarTelefonoFijo(telefonoFijo));
+    do {
+        var telefonoFijo = parseInt(prompt("Teléfono fijo:"));
+        if(!validarTelefonoFijo(telefonoFijo))
+            alert("El número de teléfono no es valido.");
+    }while(!validarTelefonoFijo(telefonoFijo));
 
     //do {
         var telefonoMovil = prompt("Teléfono móvil:");
@@ -70,7 +74,7 @@ function aniadirContacto(agenda) {
 }
 
 function mostrarAgenda(agenda) {
-    //CHANGES Hacer que la consola se borre
+    console.clear();
     if(agenda.length == 0) {
         var aceptar = confirm("La agenda está vacía, añade algún contacto. ¿Desea añadir un contacto?");
         if(aceptar)
