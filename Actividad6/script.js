@@ -44,7 +44,7 @@ function aniadirVideoMusical(videosMusicales) {
 }
 
 function mostrarVideosMusicales(videosMusicales) {
-    //CHANGES Hacer clear en la consola
+    console.clear();
     if(videosMusicales.length == 0) {
         var aceptar = confirm("No hay ningún vídeo musical en la playlist. ¿Desea añadir alguno?");
         if(aceptar)
