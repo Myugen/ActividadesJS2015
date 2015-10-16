@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen</title>
+    <script src="script.js"></script>
+</head>
+<body onload="cargarDatos(stockProductos)">
+    <div id="panel">
+        <img src="imagenes/caramelos.jpg" id="caramelos" height="50px" width="50px" alt="caramelos" onclick="aniadirCantidad(this.id, stockProductos)">
+        <img src="imagenes/gominolas.jpg" id="gominolas" height="50px" width="50px" alt="gominolas" onclick="aniadirCantidad(this.id, stockProductos)">
+        <img src="imagenes/judias.jpg" id="judías" height="50px" width="50px" alt="judía" onclick="aniadirCantidad(this.id, stockProductos)">
+        <img src="imagenes/nubes.jpg" id="nubes" height="50px" width="50px" alt="nubes" onclick="aniadirCantidad(this.id, stockProductos)">
+        <img src="imagenes/lacasitos.jpg" id="lacasitos" height="50px" width="50px" alt="lacasitos" onclick="aniadirCantidad(this.id, stockProductos)"><br>
+        <button onclick="generarFactura(stockProductos)">Generar Factura</button>
+    </div>
+    <div id="facturacion">
+
+    </div>
+</body>
+</html>
