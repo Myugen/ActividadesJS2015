@@ -108,7 +108,7 @@ function generarFactura(stockProductos) {
             if(!validarOpcion(nuevaFactura))
                 alert("Opción no valida");
         }while(!validarOpcion(nuevaFactura));
-        if(nuevaFactura == "S" || nuevaFactura == "s")
+        if((nuevaFactura == "S") || (nuevaFactura == "s"))
             location.reload();
     }
 }
