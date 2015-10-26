@@ -1,0 +1,1 @@
+alert("El ancho de su pantalla es: " + screen.width + "px\nEl alto de su pantalla es: " + screen.height + "px");
