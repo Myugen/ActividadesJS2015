@@ -1,0 +1,1 @@
+var myTimeout = setTimeout(function() {location.href='http://www.google.es'}, 10000);
