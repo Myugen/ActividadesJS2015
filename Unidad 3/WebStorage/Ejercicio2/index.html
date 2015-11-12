@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body onload="cargar()">
+    <div class="container text-center">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-6 text-right">
+                <button type="button" role="button" class="btn btn-primary" onclick="clickLike()">
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    Me gusta
+                </button>
+                </div>
+                <div class="col-md-6 text-left">
+                <button type="submit" role="button" class="btn btn-danger" onclick="localStorage.clear(); location.reload()">
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                    Borrar historial
+                </button>
+                </div>
+            </div>
+        </div>
+        <div id="info">
+            
+        </div>
+    </div>
+</body>
+</html>

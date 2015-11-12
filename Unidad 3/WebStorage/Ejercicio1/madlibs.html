@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Ejercicio 1</title>
+  <script src="script.js"></script>
+ </head>
+ <body onload="iniciar()">
+ 
+ <h1>Mad Libs</h1>
+ 
+ <ul>
+  <li>Noun: <input type="text" id="noun" onkeypress="keypress(this)">
+  <li>Adjective: <input type="text" id="adjective" onkeypress="keypress(this)">
+  <li>Someone's Name: <input type="text" id="name" onkeypress="keypress(this)">
+ </ul>
+ 
+ <button id="lib-button">Lib it!</button>
+ <button onclick="localStorage.clear(); location.reload()">Borrar webstorage</button>
+  
+ <div id="story"></div>
+  
+  <script>
+
+function libIt() {
+  if(localStorage["frase"].length != 0)
+        var array = JSON.parse(localStorage["frase"]);
+    else
+        var array = [];
+  var storyDiv = document.getElementById("story");
+  var name = document.getElementById("name").value;
+  var adjective = document.getElementById("adjective").value;
+  var noun = document.getElementById("noun").value;
+  var cadena = name + " married a " + adjective + " " + noun + "... So weird!<br>";
+  storyDiv.innerHTML = cadena;
+  array.push(cadena);
+  localStorage["frase"] = JSON.stringify(array);
+}
+
+var libButton = document.getElementById('lib-button');
+libButton.addEventListener('click', libIt);
+	</script>
+	<h5>Historial de frases</h5>
+<div id="info"></div>
+ </body>
+</html>

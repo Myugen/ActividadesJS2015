@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <script src="script.js"></script>
+</head>
+<body onload="iniciar()">
+    <div class="container text-center">
+       <h1>Ahora Caigo</h1>
+        <div class="jumbotron">
+            <div class="row">
+                <p class="text-warning">¿Qué serie estaba protagonizada por los agentes del FBI, Mulder y Scully?</p>
+            </div>
+            <div class="row">
+                <input type="text" name="" id="" class="col-md-1" maxlength="1" placeholder="*">
+                <input type="text" name="" id="" value="X" disabled class="col-md-1">
+                <input type="text" name="" id="" class="col-md-1" maxlength="1" placeholder="*">
+                <input type="text" name="" id="" class="col-md-1" maxlength="1" placeholder="*">
+                <input type="text" name="" id="" value="D" disabled class="col-md-1">
+                <input type="text" name="" id="" class="col-md-1" maxlength="1" placeholder="*">
+                <input type="text" name="" id="" class="col-md-1" maxlength="1" placeholder="*">
+                <input type="text" name="" id="" class="col-md-1" maxlength="1" placeholder="*">
+                <input type="text" name="" id="" value="T" disabled class="col-md-1">
+                <input type="text" name="" id="" class="col-md-1" maxlength="1" placeholder="*">
+                <span  class="col-md-1"></span>
+                <input type="text" name="" id="" class="col-md-1" maxlength="1" placeholder="*">
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-right">
+                <button type="button" role="button" class="btn btn-primary" onclick="clickComprobar()">
+                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+                    Comprobar
+                </button>
+                </div>
+                <div class="col-md-6 text-left">
+                <button type="submit" role="button" class="btn btn-danger" onclick="localStorage.clear(); location.reload()">
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                    Borrar historial
+                </button>
+                </div>
+            </div>
+        </div>
+        <div id="info" class="row">
+            <div class="col-md-4 text-danger well well-lg">
+                <h3>Nº de errores</h3>
+                <div id="errores"></div>
+            </div>
+            <div class="col-md-4 well well-lg">
+                <h3 class="text-primary">Historial</h3>
+                <div id="historial"></div>
+            </div>
+            <div class="col-md-4 text-success well well-lg">
+                <h3>Nº de aciertos</h3>
+                <div id="aciertos"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
