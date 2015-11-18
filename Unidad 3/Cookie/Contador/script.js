@@ -33,7 +33,7 @@ function cargar() {
     var cadena = "<p>contador de visita: " + contador + "</p><br>";
     
     /* 
-    ** Obtengo el nombre de usuario siempre y cuando exista la cookie, en caso de no existor, pido el nombre de usuario
+    ** Obtengo el nombre de usuario siempre y cuando exista la cookie, en caso de no existir, pido el nombre de usuario
     ** y creo la cookie con el nombre pedido como valor, luego muestro el usuario.
     */
     var userID = getCookie("userID");
