@@ -14,15 +14,23 @@ function buscarOpciones(opciones, nombre) {
     return -1;
 }
 
-function contenidoNoVisible(contenidos) {
+function cambiarNoVisible(contenidos) {
     for(var i = 0; i < contenidos.length; i++)
-        contenidos[i].
+        contenidos[i].className = "contenido oculto";
+}
+
+function cambiarNoSeleccionado(opciones) {
+    for(var i = 0; i < opciones.length; i++)
+        opciones[i].className = "opcion no-seleccionada";
 }
 
 function cambiar(seccion) { 
     var contenidos = document.getElementsByClassName("contenido");
     var opciones = document.getElementsByClassName("opcion");
-    var posicionContenido = buscarContenido(contenidos, seccion);
-    var posicionOpcion = buscarOpciones(opciones, seccion);
-    
+    var contenidoSeleccionado = buscarContenido(contenidos, seccion);
+    var opcionSeleccionada = buscarOpciones(opciones, seccion);
+    cambiarNoVisible(contenidos);
+    cambiarNoSeleccionado(opciones);
+    contenidos[contenidoSeleccionado].className = "contenido visible";
+    opciones[opcionSeleccionada].className = "opcion seleccionada";
 }
