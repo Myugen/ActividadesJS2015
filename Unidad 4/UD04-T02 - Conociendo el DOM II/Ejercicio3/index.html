@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>Ejercicio</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+        <textarea id="texto" cols="50" rows="20" class="form-contrl">
+            Can I get your hand to write on
+            Just a piece of leg to bite on?
+            What a night to fly my kite on
+            Do you want to flash your light on?
+            Take a look it's on display for you
+            Coming down, no not today
+
+            Did you meet your fortune teller
+            Get it off with no propeller
+            Do it up it’s on with Stella
+            What a way to finally smell her
+            Pickin’ up but not too strong for you
+            Take a piece and pass it on
+
+            Fly away on my zephyr
+            I feel it more than ever
+            And in this perfect weather
+            We’ll find a place together
+            Fly on my wind
+        </textarea>
+        <div class="row">
+            <div class="jumbotron col-md-5">
+                <div class="form-group">
+                    <span>Font:</span>
+                    <label class="radio-inline">
+                        <input type="radio" name="font" id="Serif" value="Serif" onclick="clickRadio(this.value)"> Serif
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="font" id="Fantasy" value="Fantasy" onclick="clickRadio(this.value)"> Fantasy
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="font" id="Monospace" value="Monospace" onclick="clickRadio(this.value)"> Monospace
+                    </label>
+                </div>
+                <div class="form-group">
+                    <span>Style:</span>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="Bold" value="Bold" onclick="check(this)"> Bold
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="Italic" value="Italic" onclick="check(this)"> Italic
+                    </label>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
