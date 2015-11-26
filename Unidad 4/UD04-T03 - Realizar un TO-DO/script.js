@@ -17,6 +17,7 @@ function clickCheckBox(checkbox) {
 function removeTasks() {
     var tareasABorrar = [];
     var agenda = document.getElementById("agenda");
+    var badge = document.getElementById("badge");
     var tareas = agenda.children;
     for(var i = 0; i < tareas.length; i++)
         if(tareas[i].children[0].checked)
@@ -28,6 +29,9 @@ function removeTasks() {
             agenda.removeChild(tareasABorrar[i]);
     if(agenda.children.length == 0)
         cargar();
+    if(badge.hasChildNodes())
+        badge.removeChild(badge.childNodes[0]);
+    badge.appendChild(document.createTextNode(agenda.children.length));
 }
 
 function addTask() {
