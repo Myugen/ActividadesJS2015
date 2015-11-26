@@ -1,4 +1,4 @@
-.opcion { float: left; margin: 0px;margin-right: 10px; border: 0px white solid; }
+.opcion { float: left; margin: 0px;margin-right: 10px; border: 0px white solid; cursor: pointer;}
 .seleccionada { color: white; background-color: red; border: 1px solid red;}
 .no-seleccionada { color: red; background-color: white; }
 .contenido {position: absolute; top: 28px;left: 10px; width: 800px; height: 400px; }
