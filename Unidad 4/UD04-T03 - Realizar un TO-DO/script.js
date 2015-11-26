@@ -27,11 +27,11 @@ function removeTasks() {
     else
         for(var i = 0; i < tareasABorrar.length; i++)
             agenda.removeChild(tareasABorrar[i]);
-    if(agenda.children.length == 0)
-        cargar();
     if(badge.hasChildNodes())
         badge.removeChild(badge.childNodes[0]);
     badge.appendChild(document.createTextNode(agenda.children.length));
+    if(agenda.children.length == 0)
+        cargar();
 }
 
 function addTask() {
