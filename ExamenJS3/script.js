@@ -32,6 +32,7 @@ function rellenarCelda(celda) {
     if(hermanoAnterior != null)
         if(hermanoAnterior.style.backgroundColor == color)
             podemosPintar = false;
+
     if(podemosPintar) {
     celda.style.backgroundColor = color;
         var span = document.createElement("SPAN");
@@ -84,8 +85,9 @@ function validarNúmero(numero) {
  * mensaje), los radioButton del estilo de la fuente y el tablero.
  */
 function cargar() {
-    //creo la palet
+    //Creo la paleta de colores
     var paleta = document.getElementById("paleta");
+    //Borro los childNodes ya creados para que no se apilen junto con los nuevos
     while(paleta.hasChildNodes()) {
         paleta.removeChild(paleta.firstChild);
     }
@@ -101,25 +103,29 @@ function cargar() {
         radioButton.type = "radio";
         radioButton.name = "color";
         radioButton.value = color;
+        //Checked al primero
         if(i == 0)
             radioButton.checked = true;
         paleta.appendChild(radioButton);
         paleta.appendChild(document.createTextNode(color));
     }
 
-    //creo fuentes
+    //Creo el estilo de fuentes
     var fuente = document.getElementById("fuente");
+    //Borro los childNodes ya creados para que no se apilen junto con los nuevos
     while(fuente.hasChildNodes())
         fuente.removeChild(fuente.firstChild);
     for(var i = 0; i < 2; i++) {
         var radioButton2 = document.createElement("INPUT");
         radioButton2.type = "radio";
         radioButton2.name = "fuente";
+        //Si es el primero, será el radioButton chequeado con el estilo 'normal'.
         if(i == 0) {
             var fuenteTexto = "Normal";
             radioButton2.value = "normal";
             radioButton2.checked = true;
         }
+        //Si es el segundo, será el radioButton con el estilo 'negrita'
         if(i == 1) {
             var fuenteTexto = "Negrita";
             radioButton2.value = "bold";
@@ -128,6 +134,6 @@ function cargar() {
         fuente.appendChild(document.createTextNode(fuenteTexto));
     }
 
-    //creo tablero
+    //Creo tablero llamando a la función encargada a ello
     crearTablero();
 }
