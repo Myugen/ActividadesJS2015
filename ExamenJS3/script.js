@@ -33,6 +33,8 @@ function rellenarCelda(celda) {
         if(hermanoAnterior.style.backgroundColor == color)
             podemosPintar = false;
 
+    //Si no encotramos hermanos con el mismo BgColor (podemosPintar = TRUE), pintamos el fondo del TD con el color
+    //seleccionado, y creamos un SPAN con el texto 'X'. En caso contrario, mensaje de alert
     if(podemosPintar) {
     celda.style.backgroundColor = color;
         var span = document.createElement("SPAN");
