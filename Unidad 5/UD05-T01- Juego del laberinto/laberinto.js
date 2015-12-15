@@ -8,7 +8,7 @@ function ganaste(fin) {
         cargar();
 }
 
-function perdiste() {
+function perdiste(elemento) {
     var bloques = document.getElementsByClassName("bloque");
     for(var i = 0; i < bloques.length; i++) {
         bloques[i].onmouseover = null;
@@ -17,8 +17,8 @@ function perdiste() {
     alert("¡Has perdido!");
     var fin = document.getElementById("fin");
     fin.onmouseover = null;
-    var tablero = document.getElementById("tablero");
-    tablero.onmouseout = null;
+    var laberinto = document.getElementById("laberinto");
+    laberinto.onmouseleave = null;
     if(confirm("¿Desea volver a empezar?"))
         cargar();
 }
@@ -26,11 +26,11 @@ function perdiste() {
 function iniciar() {
     var bloques = document.getElementsByClassName("bloque");
     for(var i = 0; i < bloques.length; i++)
-        bloques[i].onmouseover = perdiste;
+        bloques[i].onmouseover = function (){perdiste(this)};
     var fin = document.getElementById("fin");
     fin.onmouseover = function() {ganaste(this)};
-    var tablero = document.getElementById("tablero");
-    tablero.onmouseout = perdiste;
+    var laberinto = document.getElementById("laberinto");
+    laberinto.onmouseleave = function (){perdiste(this)};
 }
 
 function cargar() {
