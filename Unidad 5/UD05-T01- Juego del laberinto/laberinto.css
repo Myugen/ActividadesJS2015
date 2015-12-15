@@ -8,10 +8,16 @@ p {
 }
 
 #laberinto {
-	margin: auto;
+    margin: auto;
 	position: relative;
 	height: 300px;
 	width: 700px;
+}
+
+#tablero {
+    width: 700px;
+    height: 300px;
+    margin: auto;
 }
 
 #inicio, #fin {
