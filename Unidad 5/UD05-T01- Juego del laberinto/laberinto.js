@@ -8,7 +8,7 @@ function ganaste(fin) {
         cargar();
 }
 
-function perdiste(elemento) {
+function perdiste() {
     var bloques = document.getElementsByClassName("bloque");
     for(var i = 0; i < bloques.length; i++) {
         bloques[i].onmouseover = null;
@@ -26,11 +26,11 @@ function perdiste(elemento) {
 function iniciar() {
     var bloques = document.getElementsByClassName("bloque");
     for(var i = 0; i < bloques.length; i++)
-        bloques[i].onmouseover = function (){perdiste(this)};
+        bloques[i].onmouseover = perdiste;
     var fin = document.getElementById("fin");
     fin.onmouseover = function() {ganaste(this)};
     var laberinto = document.getElementById("laberinto");
-    laberinto.onmouseleave = function (){perdiste(this)};
+    laberinto.onmouseleave = perdiste;
 }
 
 function cargar() {
