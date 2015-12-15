@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+}
+#menu {
+    list-style: none;
+    background: #0ff02f;
+    height: 32px;
+    margin: 0;
+}
+
+#menu li {
+    float: left;
+    padding: .3em;
+    display: block;
+}
+
+#menu li img {
+    width: 100px;
+    height: 25px;
+}
