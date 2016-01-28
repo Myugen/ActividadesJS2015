@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <form action="index.html" onsubmit="return validaciones(this)">
+        Usuario:&nbsp;<input type="text" name="" id="usuario" maxlength="20">*
+        &nbsp;<label id="usuarioResultado"></label>
+        <br>
+        Nombre:&nbsp;<input type="text" name="" id="nombre">*
+        <label id="nombreResultado"></label>
+        <br>
+        Apellidos:&nbsp;<input type="text" name="" id="apellidos">*
+        &nbsp;<label id="apellidosResultado"></label>
+        <br>
+        Dirección: <br><textarea id="direccion" cols="30" rows="5" onkeydown="maximoTextarea(this, 100)"></textarea>
+        <label id="direccionResultado"></label>
+        <br>
+        Teléfono:&nbsp;<input type="text" name="" id="telefono">
+        <label id="telefonoResultado"></label>
+        <br>
+        Correo Electrónico:&nbsp;<input type="text" name="" id="email">*
+        <label id="emailResultado"></label>
+        <br>
+        Sugerencia: <br><textarea name="" id="sugerencia" cols="30" rows="5" onkeydown="maximoTextarea(this, 500)"></textarea>*
+        <label id="sugerenciaResultado"></label>
+        <br>
+        Foto:&nbsp;<input type="file" name="" id="foto">
+        <label id="fotoResultado"></label>
+        <br>
+        <input type="submit" value="Enviar">
+        <br><br>
+        <span style="color:crimson">Los campos con '*' son obligatorios</span>
+    </form>
+</body>
+</html>
